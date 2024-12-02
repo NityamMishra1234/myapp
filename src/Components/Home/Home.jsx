@@ -1,173 +1,157 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
-
-gsap.registerPlugin();
+import './Home.css'
 
 export default function Home() {
-  const containerRef = useRef(null);
+ 
 
-  useEffect(() => {
-    // GSAP animation: box comes from the left to the center of the screen
-    gsap.fromTo(
-      ".box",  // Targeting the element with the class '.box'
-      { x: "-100vw" },  // Starting position: 100% to the left of the viewport
-      { x: 0, duration: 2, ease: "power2.out" } // End position: Center of the screen, with a 2-second duration
-    );
-
-  }, []);
-
-  useEffect(()=>{
-    gsap.fromTo(
-      ".box1",{
-        y:"-200px",
-      },{y: 0, duration: 2, ease: "power2.out"}
-    )
-  },[])
-  useEffect(()=>{
-    gsap.fromTo(
-      ".box2",{
-        x:"100vw",
-      },{x: 0, duration: 2, ease: "power2.out"}
-    )
-  },[])
-  useEffect(()=>{
-    gsap.fromTo(
-      ".box3",{
-        y:"200px",
-      },{y: 0, duration: 2, ease: "power2.out"}
-    )
-  },[])
+ 
 
   return (
-    <div className="flex flex-col lg:flex-col w-screen h-full">
-      <div className="flex flex-col items-center lg:flex-row h-full pt-6 pb-6 text-center bg-black shadow-xl shadow-slate-400 ">
-        <div className="text-center lg:text-center md:m-1 justify-center transform w-1/2">
-          <p className="text-center flex items-center justify-center ">
-            <h1 className="text-5xl bg-orange-700 text-center justify-center flex items-center text-white rounded-md pr-2 pl-2 pb-1">
-              Hii!!!
-            </h1>
-          </p>
-          <span className="text-slate-200 text-3xl text-center m-2 hover:scale-90 transition-transform duration-300 ease-in-out">
-            I am
-            <span className="text-orange-500 ml-1 text-2xl underline hover:scale-90 transition-transform duration-300 ease-in-out">
-              Nityam Kumar
-            </span>
-          </span>
-          <p className="text-slate-200 text-3xl text-center hover:scale-90 transition-transform duration-300 ease-in-out">
-            I’m a passionate web developer specializing in the MERN stack
-            (MongoDB, Express, React, and Node.js). I love crafting modern,
-            responsive, and user-friendly web applications that solve real-world
-            problems
-          </p>
-          <div className="flex flex-row items-center content-center align-middle justify-center mb-5 mt-5">
-            <Link to="https://mongoosejs.com/docs/" target="_blank">
-              <img
-                src="\Mongoose (2).png"
-                alt="Mongoose"
-                className="h-16 w-16 shadow-md mr-7 text-orange-400 rounded-full hover:scale-90 transition-transform duration-300 ease-in-out"
-              />
-            </Link>
-            <Link to="https://expressjs.com/" target="_blank">
-              <img
-                src="/express.jpg"
-                alt="Express"
-                className="h-16 w-16 shadow-md mr-7 rounded-full hover:scale-90 transition-transform duration-300 ease-in-out"
-              />
-            </Link>
-            <Link to="https://react.dev/" target="_blank">
-              <img
-                src="/React.jpg"
-                alt="React"
-                className="h-16 w-16 shadow-md mr-7 rounded-full hover:scale-90 transition-transform duration-300 ease-in-out"
-              />
-            </Link>
-            <Link to="https://nodejs.org/en" target="_blank">
-              <img
-                src="/Node.jpg"
-                alt="Node"
-                className="h-16 w-16 shadow-md mr-7 rounded-full hover:scale-90 transition-transform duration-300 ease-in-out"
-              />
-            </Link>
-          </div>
+    <div className="flex flex-col w-full h-full overflow-hidden bg-black">
+      {/* Intro Section */}
+      return (
+    <div className="bg-black text-white h-screen flex flex-col justify-center items-center text-center">
+      <div className="space-y-6">
+        <h1 className="text-4xl font-bold text-orange-500">Hi!!!</h1>
+        <h2 className="text-2xl font-semibold text-orange-300">I am Nityam Kumar</h2>
+        <p className="text-lg max-w-lg mx-auto">
+          I’m a passionate web developer specializing in the{' '}
+          <span className="text-orange-400 font-semibold">MERN stack</span> (MongoDB, Express, React, and Node.js).
+        </p>
+        <p className="text-lg max-w-lg mx-auto">
+          I create <span className="text-orange-400 font-semibold">modern</span>,{' '}
+          <span className="text-orange-400 font-semibold">responsive</span>, and{' '}
+          <span className="text-orange-400 font-semibold">user-friendly</span> web applications.
+        </p>
+        <div className="flex justify-center gap-4 mt-6">
+          <img src="\Mongoose (2).png" alt="MongoDB" className="h-12 w-12 rounded-full" />
+          <img src="\express.jpg" alt="Express" className="h-12 w-12 rounded-full" />
+          <img src="\React.jpg" alt="React" className="h-12 w-12 rounded-full" />
+          <img src="\Node.jpg" alt="Node.js" className="h-12 w-12 rounded-full" />
         </div>
-        {/* Profile Image on the right */}
-        <div className="ml-32 mb-4 lg:mr-4 w-1/2 p-10 flex items-center justify-center">
-          {/* Orange Shape for Glow */}
-          <div className="absolute bg-orange-700 w-72 h-52 -rotate-45 rounded-full blur-md"></div>
-
-          {/* Profile Image */}
-          <div className="relative flex items-center justify-center">
-            <img
-              className="w-96 h-96 rounded-full shadow-lg"
-              src="/Profile.png"
-              alt="Profile"
-            />
-          </div>
-        </div>
+        <button className="mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
+          View My Work
+        </button>
+      </div>
+      
+    </div>
+    <section className="bg-gray-900 text-white py-20 px-6">
+  <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="space-y-4">
+      <h2 className="text-3xl font-semibold text-orange-500">About Me</h2>
+      <p className="text-lg">
+        I specialize in creating dynamic and responsive web applications using the latest technologies.
+      </p>
+      <p className="text-lg">
+        With a deep understanding of front-end and back-end technologies, I deliver high-quality, performance-optimized solutions.
+      </p>
+      <div className="mt-8">
+        <h3 className="text-xl text-orange-400">Skills:</h3>
+        <ul className="list-disc pl-6 mt-4">
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>Express.js</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+    </div>
+    <div className="relative">
+      <img className="rounded-full shadow-lg w-80 h-80 mx-auto" src="/Profile.png" alt="Profile" />
+    </div>
+  </div>
+</section>
+<section className="py-20 bg-black text-white">
+  <h2 className="text-3xl font-semibold text-center text-orange-500">My Projects</h2>
+  
+  <div className="mt-12 overflow-x-auto no-scrollbar">
+    <div className="flex space-x-8 pb-6">
+      {/* Project 1 */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex-shrink-0 w-96">
+        <img src="\Screenshot 2024-12-02 214816.png" alt="Project 1" className="w-full h-48 object-cover rounded-lg" />
+        <h3 className="text-xl font-semibold mt-4">Lotus Green Boys pg web</h3>
+        <p className="mt-2 text-lg">A PG web app streamlines management for owners, offering dashboards for student profiles, payments, and room allocation. Students track dues and updates. Built with MERN, it ensures efficiency and transparency.</p>
+        <a href="https://lotus-green.vercel.app/" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
+        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
       </div>
 
-      <div className="flex flex-col flex-inline  h-96 text-center bg-black  ">
-        {/* Framework and Technologies Text */}
-        <div className="w-screen h-fit flex  justify-center ">
-          <p className="w-fit h-fit bg-orange-700 flex pl-2 pr-2 pt-1 pb-1 text-slate-200 mt-3 rounded-xl text-xl">
-            Framework and Technologies
-          </p>
-        </div>
-
-        {/* This is where the image will be aligned to the left */}
-       <div className="w-screen h-full flex flex-row lg:gap-32 md:flex-wrap md:gap-2">
-       <div className="box h-20 w-20 mt-36 mr-6 ml-2 ">
-        <img 
-        className="rounded-full"
-        src="\Html-removebg-preview.png" alt="" />
-        <p className="text-white">Html</p>
-        
-       </div>
-       <div className="box h-20 w-20 mt-32 mr-6  ">
-        <img 
-        className="rounded-full"
-        src="\css-removebg-preview.png" alt="\css-removebg-preview.png" />
-        <p className="text-white">css</p>
-        
-       </div>
-       <div className="box h-20 w-20 mt-28 mr-6  ">
-        <img 
-        className="rounded-full"
-        src="\js-removebg-preview.png" alt="\css-removebg-preview.png" />
-        <p className="text-white">Java Script</p>    
-       </div>
-       <div className="box1 h-20 w-20 mt-28 mr-6 ">
-        <img 
-        className="rounded-full "
-        src="\React.jpg" alt="" />
-        <p className="text-white text-justify">React-Js</p>    
-       </div>
-       <div className="box2 h-20 w-20 mt-28 mr-6 ">
-        <img 
-        className="rounded-full "
-        src="\Node.jpg" alt="" />
-        <p className="text-white text-justify">Node-Js</p>    
-       </div>
-       <div className="box2 h-20 w-20 mt-32 mr-6 ">
-        <img 
-        className="rounded-full "
-        src="\express.jpg" alt="" />
-        <p className="text-white text-justify">Express-Js</p>    
-       </div>
-       <div className="box2 h-20 w-20 mt-36 mr-6 ">
-        <img 
-        className="rounded-full "
-        src="\Mongoose (2).png" alt="" />
-        <p className="text-white text-justify">mongo_DB</p>    
-       </div>
-       </div>
-       
-       <div className="box3 flex items-center justify-center mb-5 mr-16">
-        <img className="h-16 w-16"
-         src="/Git Logo.png" alt="" srcset="" />
-       </div>
+      {/* Project 2 */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex-shrink-0 w-96">
+        <img src="\Screenshot 2024-12-02 213809.png" alt="Project 2" className="w-full h-48 object-cover rounded-lg" />
+        <h3 className="text-xl font-semibold mt-4">GCS Web Page</h3>
+        <p className="mt-2 text-lg">GCS is a dynamic agency specializing in crafting tailored websites and applications. We blend innovation with functionality to deliver impactful digital solutions, ensuring seamless user experiences and business growth..</p>
+        <a href="https://gcs-weld.vercel.app/" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
+        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
       </div>
+
+      {/* Project 3 */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex-shrink-0 w-96">
+        <img src="\Screenshot 2024-12-02 215004.png" alt="Project 3" className="w-full h-48 object-cover rounded-lg" />
+        <h3 className="text-xl font-semibold mt-4">My Portfolio</h3>
+        <p className="mt-2 text-lg">My portfolio showcases my journey as a developer, featuring projects in web and app development. It highlights my skills in modern technologies, creative problem-solving, and dedication to building impactful digital solutions</p>
+        <a href="https://gcs-weld.vercel.app/" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
+        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
+      </div>
+
+      {/* Project 4 */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex-shrink-0 w-96">
+        <img src="\Screenshot 2024-12-02 135634.png" alt="Project 4" className="w-full h-48 object-cover rounded-lg" />
+        <h3 className="text-xl font-semibold mt-4">A blog Creating application</h3>
+        <p className="mt-2 text-lg">A blog web app that provides a platform for sharing ideas, stories, and insights. It features user-friendly design, dynamic content management, and interactive commenting, fostering engagement and community building.</p>
+        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
+        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
+      </div>
+
+      {/* Project 5 */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex-shrink-0 w-96">
+        <img src="\Screenshot 2024-12-02 220007.png" alt="Project 5" className="w-full h-48 object-cover rounded-lg" />
+        <h3 className="text-xl font-semibold mt-4">Todo Application</h3>
+        <p className="mt-2 text-lg">A Todo web app designed for efficient task management. Users can add, update, and delete tasks with ease. Featuring a clean UI and real-time updates, it helps you stay organized and boost productivity.</p>
+        <a href="#" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
+        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
+      </div>
+
+      {/* Project 6 */}
+      <div className="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex-shrink-0 w-96">
+        <img src="\Screenshot 2024-12-02 221459.png" alt="Project 6" className="w-full h-48 object-cover rounded-lg" />
+        <h3 className="text-xl font-semibold mt-4">Password Generator</h3>
+        <p className="mt-2 text-lg">A Password Generator web app that creates strong, secure passwords to protect your accounts. Customize length and character types to meet your needs, ensuring enhanced security and peace of mind.</p>
+        <a href="#" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
+        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section className="py-20 bg-gray-900 text-white">
+  <h2 className="text-3xl font-semibold text-center text-orange-500">Technologies I Use</h2>
+  <div className="mt-12 flex justify-center flex-wrap gap-8">
+    <div className="tech-item p-6 bg-gray-800 rounded-full shadow-lg hover:scale-110 transition transform">
+      <img className="w-16 h-16" src="\Html-removebg-preview.png" alt="HTML" />
+    </div>
+    <div className="tech-item p-6 bg-gray-800 rounded-full shadow-lg hover:scale-110 transition transform">
+      <img className="w-16 h-16" src="\css-removebg-preview.png" alt="CSS" />
+    </div>
+    <div className="tech-item p-6 bg-gray-800 rounded-full shadow-lg hover:scale-110 transition transform">
+      <img className="w-16 h-16" src="\js-removebg-preview.png" alt="JavaScript" />
+    </div>
+    <div className="tech-item p-6 bg-gray-800 rounded-full shadow-lg hover:scale-110 transition transform">
+      <img className="w-16 h-16 rounded-full" src="\React.jpg" alt="React" />
+    </div>
+    <div className="tech-item p-6 bg-gray-800 rounded-full shadow-lg hover:scale-110 transition transform">
+      <img className="w-16 h-16 rounded-full" src="\Node.jpg" alt="Node.js" />
+    </div>
+    <div className="tech-item p-6 bg-gray-800 rounded-full shadow-lg hover:scale-110 transition transform">
+      <img className="w-16 h-16 rounded-full" src="\express.jpg" alt="Express" />
+    </div>
+  </div>
+</section>
+
+     
     </div>
   );
 }

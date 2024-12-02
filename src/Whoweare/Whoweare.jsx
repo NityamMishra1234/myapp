@@ -4,71 +4,84 @@ import { Link } from 'react-router-dom';
 export default function Whoweare() {
     
     return (
-        
-        
-        <div className=" flex  flex-col  lg:flex-col w-full h-full ">
-
-           
-           
-            <div class=" flex flex-col items-center lg:flex-row h-99 rounded-lg ml-10 text-center mr-7 mt-9 bg-white shadow-lg shadow-slate-400">
-              
-               
-
-                
-                <div class="m-4 p-8 text-center lg:text-center md:m-5 justify-centertransform hover:scale-90 transition-transform duration-300 ease-in-out">
-                    <h1 class="text-5xl font-bold p-4"> Welcome to my Blog Application project!
-
-</h1>
-                    <p class="text-gray-600 text-3xl text-center p-3"> Welcome to Garur Computing Services, where innovation meets excellence in the digital realm. Established with a vision to redefine the landscape of digital services, GCS has emerged as a pioneering force dedicated to transforming dreams into digital realities.</p>
-                   
-                </div>
-            </div>
-
-            <div className="flex flex-col items-center lg:flex-row h-99 rounded-lg ml-10 text-center mr-7 mt-9 mb-10 bg-gray-600 shadow-lg shadow-slate-700">
-                <div class="mt-8 text-center lg:text-center lg:m-5 justify-centertransform hover:scale-90 transition-transform duration-300 ease-in-out">
-                    <h1 class="mt-5 p-4 text-5xl font-bold text-yellow-50">Who We Are</h1>
-                    <p class=" p-3 text-white text-3xl text-center">At GCS, we are not just a technology company; we are your strategic partners in the digital journey. With a commitment to excellence, a passion for innovation, and a customer-centric approach, we go beyond conventional solutions to provide a seamless blend of creativity and technology.</p>
-                   
-                </div>
-
-            </div>
-            <div class=" flex flex-col items-center lg:flex-row h-99 rounded-lg ml-10 text-center mr-7 mt-9 bg-white shadow-lg shadow-slate-400">
-              
-               
-
-                
-                <div class="m-4 p-8 text-center lg:text-center md:m-5 justify-centertransform hover:scale-90 transition-transform duration-300 ease-in-out">
-                    <h1 class="text-5xl font-bold p-4">Our Mission</h1>
-                    <p class="text-gray-600 text-3xl text-center p-3">Empowering Dreams, Transforming Realities</p>
-                    <p className="text-gray-600 text-center">
-                    Our mission is encapsulated in our motto. "Your Dream, We Create" symbolizes our dedication to understanding your unique vision and turning it into tangible, impactful digital experiences. From concept to execution, GCS is your trusted collaborator, committed to bringing your dreams to life
-                    </p>
-                </div>
-            </div>
-            <div className="flex flex-col items-center lg:flex-row h-99 rounded-lg ml-10 text-center mr-7 mt-9 mb-10 bg-gray-600 shadow-lg shadow-slate-700">
-                <div class="mt-8 text-center lg:text-center lg:m-5 justify-centertransform hover:scale-90 transition-transform duration-300 ease-in-out">
-                    <h1 class="mt-5 p-4 text-5xl font-bold text-yellow-50">What Sets Us Apart</h1>
-                    <p class=" p-3 text-white text-3xl text-center">Innovation at the Core</p>
-                    <p className="text-yellow-50 p-4 text-center">
-                    At GCS, innovation is not just encouraged; it's ingrained in our DNA. We are not content with the status quo; instead, we thrive on the possibilities that emerging technologies bring. Our team of dedicated professionals stays at the forefront of industry trends, exploring cutting-edge solutions and pioneering approaches. We are committed to providing our clients with solutions that transcend the present, ensuring that their digital investments remain not only current but also future-proof. Embracing the latest advancements, we turn challenges into opportunities, pushing the boundaries of what's possible in the dynamic landscape of technology. At GCS, innovation is not a mere practice – it's a constant evolution, driving us to explore new horizons and deliver exceptional value to our clients .
-                   
-                       <p className="text-center w-27 m-5 mt-7">
-                       
-                       <Link
-                        to='/MoreAbout'
-                        className='text-black font-medium text-3xl bg-white hover:text-green-600 rounded-xl hover:bg-stone-700 p-3 '
-                        >
-                         More about
-                        </Link>
-                       
-
-                       </p>
-
-                   
-                    </p>
-                </div>
-
-            </div>
+        <div className="bg-black text-white p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Left Section: About Me */}
+        <div className="flex flex-col justify-center items-center lg:items-start p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h1 className="text-5xl font-bold text-orange-500 mb-6">Who Am I?</h1>
+          <p className="text-lg mb-4 text-center lg:text-left">
+            Hi, I'm Nityam! A passionate web developer with experience in building dynamic web applications using modern technologies like React.js, Node.js, and more. I enjoy solving real-world problems and continuously learning new technologies to expand my skill set.
+          </p>
+          <p className="text-lg mb-6 text-center lg:text-left">
+            With a keen eye for detail and a love for clean, efficient code, I strive to deliver high-quality, user-friendly applications. I'm currently exploring full-stack development and enhancing my backend skills with the MERN stack. When I'm not coding, you'll find me exploring new tech trends, reading, or learning something new.
+          </p>
+          <div className="flex gap-6 justify-center lg:justify-start">
+            <Link
+              to="https://github.com/NityamMishra1234"
+              className="bg-orange-700 hover:bg-orange-800 font-medium rounded-lg py-2 px-6 transition-all transform hover:scale-105"
+            >
+              GitHub
+            </Link>
+            <Link
+              to="https://www.linkedin.com/in/nityam-mishra/"
+              className="bg-blue-700 hover:bg-blue-800 font-medium rounded-lg py-2 px-6 transition-all transform hover:scale-105"
+            >
+              LinkedIn
+            </Link>
+          </div>
         </div>
+
+        {/* Right Section: Skills */}
+        <div className="flex flex-col justify-center items-center lg:items-start p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h2 className="text-4xl font-bold text-orange-500 mb-6">Technical Skills</h2>
+          <div className="space-y-4">
+            <div>
+              <p className="text-lg">
+                <strong className="text-white">Frontend:</strong> React.js, Redux Toolkit, React Native, HTML, CSS, Tailwind CSS, GSAP
+              </p>
+            </div>
+            <div>
+              <p className="text-lg">
+                <strong className="text-white">Backend:</strong> Node.js, Express.js
+              </p>
+            </div>
+            <div>
+              <p className="text-lg">
+                <strong className="text-white">Database:</strong> MongoDB, Appwrite
+              </p>
+            </div>
+            <div>
+              <p className="text-lg">
+                <strong className="text-white">Tools & Technologies:</strong> Git, Vite, Postman, Nodemailer
+              </p>
+            </div>
+            <div>
+              <p className="text-lg">
+                <strong className="text-white">Other Skills:</strong> SEO Optimization, Responsive Design, Email Notifications
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-3xl font-bold text-orange-500 mt-8 mb-4">Technologies I Use</h3>
+          <div className="flex gap-6 flex-wrap justify-center">
+            <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
+              <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" className="w-12 h-12" />
+            </div>
+            <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
+              <img src="https://img.icons8.com/ios-filled/50/000000/nodejs.png" alt="Node.js" className="w-12 h-12" />
+            </div>
+            <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
+              <img src="https://img.icons8.com/ios-filled/50/000000/mongodb.png" alt="MongoDB" className="w-12 h-12" />
+            </div>
+            <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
+              <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" className="w-12 h-12" />
+            </div>
+            <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
+              <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" className="w-12 h-12" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     );
 }

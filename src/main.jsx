@@ -11,6 +11,8 @@ import What from './Components/What/What'
 import Contact from './Components/Contact/Contact'
 import Whoweare from './Whoweare/Whoweare'
 import MoreAbout from './Components/MoreAbout/MoreAbout'
+import Todo from './Components/Todo/Todo'
+import Password from './Components/PasswordGenerator/Password'
 
 
 
@@ -39,6 +41,12 @@ const router =createBrowserRouter([
       {
         path : 'MoreAbout',
         element :<MoreAbout/>
+      },{
+        path:"Todo",
+        element:<Todo/>
+      },{
+        path:"Password",
+        element:<Password/>
       }
 
      

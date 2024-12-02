@@ -1,0 +1,4 @@
+::-webkit-scrollbar {
+    width: 0; /* Hides the scrollbar in WebKit browsers like Chrome, Safari */
+    height: 0;
+  }
