@@ -94,7 +94,7 @@ export default function Home() {
         <img src="\Screenshot 2024-12-02 215004.png" alt="Project 3" className="w-full h-48 object-cover rounded-lg" />
         <h3 className="text-xl font-semibold mt-4">My Portfolio</h3>
         <p className="mt-2 text-lg">My portfolio showcases my journey as a developer, featuring projects in web and app development. It highlights my skills in modern technologies, creative problem-solving, and dedication to building impactful digital solutions</p>
-        <a href="https://gcs-weld.vercel.app/" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
+        <a href="https://myapp-smoky-theta.vercel.app/" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
         <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
       </div>
 
@@ -113,7 +113,7 @@ export default function Home() {
         <h3 className="text-xl font-semibold mt-4">Todo Application</h3>
         <p className="mt-2 text-lg">A Todo web app designed for efficient task management. Users can add, update, and delete tasks with ease. Featuring a clean UI and real-time updates, it helps you stay organized and boost productivity.</p>
         <a href="#" className="mt-4 inline-block text-orange-500 hover:text-orange-400 mr-6" target="BLANK">View Project</a>
-        <a href="https://github.com/NityamMishra1234/" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
+        <a href="#" className="mt-4 inline-block text-orange-500 hover:text-orange-400" target="BLANK">GitHub</a>
       </div>
 
       {/* Project 6 */}
