@@ -68,10 +68,10 @@ export default function Whoweare() {
               <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" className="w-12 h-12" />
             </div>
             <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
-              <img src="https://img.icons8.com/ios-filled/50/000000/nodejs.png" alt="Node.js" className="w-12 h-12" />
+              <img src="\Node.jpg" alt="Node.js" className="w-12 h-12 rounded-full" />
             </div>
             <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
-              <img src="https://img.icons8.com/ios-filled/50/000000/mongodb.png" alt="MongoDB" className="w-12 h-12" />
+              <img src="\Mongoose (2).png" alt="MongoDB" className="w-12 h-12 rounded-full" />
             </div>
             <div className="bg-gray-700 p-4 rounded-full mb-4 transform hover:scale-110 transition-transform duration-300">
               <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" className="w-12 h-12" />

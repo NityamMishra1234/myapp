@@ -3,103 +3,67 @@ import { Link } from "react-router-dom";
 
 export default function What() {
   return (
-    <div className="flex flex-col lg:flex-col  gap-12 w-full h-full bg-black p-8">
-      {/* Project 1 */}
-      <div className=" justify-center flex flex-col lg:flex-row w-full bg-gray-800 rounded-lg shadow-xl p-8 hover:scale-105 transition-transform duration-300 ">
-        <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">Project 1</h1>
-          <h2 className="text-2xl text-gray-300 mb-4">A Blog Application</h2>
-          <p className="text-lg text-white mb-6">
-            This application is a modern, feature-rich blogging platform designed to provide a seamless user experience. Built using React.js for the frontend and powered by Appwrite as the backend service, it combines cutting-edge web technologies to deliver performance and functionality.
-          </p>
-          <div className="flex gap-12 justify-center lg:justify-start mb-6">
-            <div className="w-fit">
-              <p className="text-2xl text-white">Frontend</p>
-              <ul className="text-lg text-white list-disc ml-6">
-                <li>Framework: React.js</li>
-                <li>Form Management: React Hook Form</li>
-              </ul>
-            </div>
-            <div className="w-fit">
-              <p className="text-2xl text-white">Backend</p>
-              <ul className="text-lg text-white list-disc ml-6">
-                <li>Backend as a Service (BaaS): Appwrite</li>
-              </ul>
-            </div>
-          </div>
-          <div className="flex justify-center lg:justify-start">
-            <Link
-              to="https://github.com/NityamMishra1234"
-              className="bg-orange-700 text-white hover:bg-orange-800 font-medium rounded-lg py-2 px-6 transition-all"
-            >
-              GitHub
-            </Link>
-          </div>
-        </div>
-      </div>
+    <div className="bg-black text-white min-h-screen">
+      <section className="py-20 text-center">
+        <h1 className="text-4xl font-semibold text-orange-500">What I Did?</h1>
+        <p className="mt-4 text-lg max-w-2xl mx-auto">
+          Here's a glimpse of the projects I've worked on, using the latest technologies to build modern, responsive, and user-friendly applications.
+        </p>
+      </section>
 
-      {/* Project 2 */}
-      <div className="flex flex-col lg:flex-row w-full bg-gray-600 rounded-lg shadow-xl p-8 hover:scale-105 transition-transform justify-center">
-        <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">Project 2</h1>
-          <h3 className="text-2xl text-yellow-50 mb-4">A Full Stack Website of my agency called GCS</h3>
-          <p className="text-lg text-yellow-50 mb-6">
-            GCS is the official website of our agency, dedicated to crafting exceptional websites and applications tailored to meet the unique needs of our clients. It serves as a digital hub where we showcase our expertise, creative solutions, and a portfolio of successful projects.
-          </p>
-          <div className="flex justify-center gap-4 mb-6">
-            <Link
-              to="https://github.com/NityamMishra1234"
-              className="bg-orange-700 text-white hover:bg-orange-800 font-medium rounded-lg py-2 px-6 transition-all"
-            >
-              GitHub
-            </Link>
-            <Link
-              to="https://gcs-weld.vercel.app/"
-              className="bg-orange-700 text-white hover:bg-orange-800 font-medium rounded-lg py-2 px-6 transition-all"
-            >
-              Visit
-            </Link>
-          </div>
+      {/* Projects */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-10 px-6">
+        {/* Todo App */}
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <img src="/todo-app.jpg" alt="Todo App" className="w-full h-48 object-cover rounded-lg" />
+          <h3 className="text-xl font-semibold mt-4">Todo App</h3>
+          <p className="mt-2 text-lg">A task management app built with React, Redux Toolkit for state management, and Vite as the bundler.</p>
+          <a href="/todo" className="text-orange-400 mt-2 inline-block">View Project</a>
         </div>
-      </div>
 
-      {/* Project 3 */}
-      <div className="flex flex-col lg:flex-row w-full bg-gray-700 rounded-lg shadow-xl p-8 justify-center">
-        <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">Project 3</h1>
-          <h3 className="text-2xl text-yellow-50 mb-4">A Password Generator Application</h3>
-          <p className="text-lg text-white mb-6">
-            This password generator application is designed to help users generate secure passwords for their accounts. It offers customization options such as length, character types (uppercase, lowercase, symbols, numbers), and ensures that generated passwords meet security standards.
-          </p>
-          <div className="flex justify-center gap-4 mb-6">
-            <Link
-              to="https://github.com/NityamMishra1234"
-              className="bg-orange-700 text-white hover:bg-orange-800 font-medium rounded-lg py-2 px-6 transition-all"
-            >
-              GitHub
-            </Link>
-          </div>
+        {/* Blog Application */}
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <img src="/blog-app.jpg" alt="Blog Application" className="w-full h-48 object-cover rounded-lg" />
+          <h3 className="text-xl font-semibold mt-4">Blog Application</h3>
+          <p className="mt-2 text-lg">A full-stack blog application built with React, Appwrite backend, and React Hook Form for efficient form handling.</p>
+          <a href="/blog" className="text-orange-400 mt-2 inline-block">View Project</a>
         </div>
-      </div>
 
-      {/* Project 4 */}
-      <div className="flex flex-col lg:flex-row w-full bg-gray-800 rounded-lg shadow-xl p-8 justify-center">
-        <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">Project 4</h1>
-          <h3 className="text-2xl text-yellow-50 mb-4">A PG Management System</h3>
-          <p className="text-lg text-white mb-6">
-            This web application is designed to manage Paying Guest (PG) accommodations. It includes features like student registration, room management, payment tracking, and a dashboard for both owners and students to keep track of important details and updates.
-          </p>
-          <div className="flex justify-center gap-4 mb-6">
-            <Link
-              to="https://github.com/NityamMishra1234"
-              className="bg-orange-700 text-white hover:bg-orange-800 font-medium rounded-lg py-2 px-6 transition-all"
-            >
-              GitHub
-            </Link>
-          </div>
+        {/* PG Management System */}
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <img src="/pg-management.jpg" alt="PG Management System" className="w-full h-48 object-cover rounded-lg" />
+          <h3 className="text-xl font-semibold mt-4">PG Management System</h3>
+          <p className="mt-2 text-lg">A management system for paying guest accommodations, built with the MERN stack and offering features for room and student management.</p>
+          <a href="/pg-management" className="text-orange-400 mt-2 inline-block">View Project</a>
         </div>
-      </div>
+
+        {/* GCS Website */}
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <img src="/gcs-website.jpg" alt="GCS Website" className="w-full h-48 object-cover rounded-lg" />
+          <h3 className="text-xl font-semibold mt-4">GCS Website</h3>
+          <p className="mt-2 text-lg">A professional website for the GCS agency, showcasing services for creating websites and applications using the latest technologies.</p>
+          <a href="/gcs-website" className="text-orange-400 mt-2 inline-block">View Project</a>
+        </div>
+
+        {/* Password Generator */}
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <img src="/password-generator.jpg" alt="Password Generator" className="w-full h-48 object-cover rounded-lg" />
+          <h3 className="text-xl font-semibold mt-4">Password Generator</h3>
+          <p className="mt-2 text-lg">A secure password generator with customizable options for length, special characters, and more, designed using JavaScript.</p>
+          <a href="/password-generator" className="text-orange-400 mt-2 inline-block">View Project</a>
+        </div>
+
+        {/* Portfolio Website */}
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <img src="/portfolio.jpg" alt="Portfolio Website" className="w-full h-48 object-cover rounded-lg" />
+          <h3 className="text-xl font-semibold mt-4">Portfolio Website</h3>
+          <p className="mt-2 text-lg">This portfolio website, showcasing my skills and projects, built with React.js and Tailwind CSS.</p>
+          <a href="/" className="text-orange-400 mt-2 inline-block">View Project</a>
+        </div>
+
+        
+        
+      </section>
     </div>
   );
 }

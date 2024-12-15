@@ -30,13 +30,17 @@ export default function Home() {
           <img src="\React.jpg" alt="React" className="h-12 w-12 rounded-full" />
           <img src="\Node.jpg" alt="Node.js" className="h-12 w-12 rounded-full" />
         </div>
-        <button className="mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
-          View My Work
-        </button>
+      
       </div>
+      <div className="w-28 h-10 flex justify-center text-center bg-orange-700 text-white rounded-2xl mt-4">
+        <Link to='/What'>
+        <p className="items-center justify-center align-middle pt-2"
+        >View My Work</p>
+        </Link>
+       </div>
       
     </div>
-    <section className="bg-gray-900 text-white py-20 px-6">
+    <section className="bg-gray-900 text-white py-20 px-6 ">
   <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
     <div className="space-y-4">
       <h2 className="text-3xl font-semibold text-orange-500">About Me</h2>
